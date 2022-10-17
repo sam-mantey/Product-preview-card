@@ -35,8 +35,8 @@ Users should be able to:
   
 ### Links
 
-- Solution URL: [Add solution URL here]()
-- Live Site URL: [Add live site URL here](./Screenshots/mobile-view.jpg)
+- Solution URL: [Produuct-preview-card](https://sam-mantey.github.io/Product-preview-card/)
+- Live Site URL: [Produuct-preview-card](https://sam-mantey.github.io/Product-preview-card/)
 
 ## My process
 

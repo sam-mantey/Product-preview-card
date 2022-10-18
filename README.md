@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Screenshot
 
-![Mobile view](./Screenshots/Screenshot%202022-10-17%20at%2011-12-31%20Frontend%20Mentor%20Product%20preview%20card%20component.png)
-![Desktop View](./Screenshots/Screenshot%202022-10-17%20at%2011-09-10%20Frontend%20Mentor%20Product%20preview%20card%20component.png)
+![Mobile view](./Screenshots/New-desktop-view.png)
+![Desktop View](./Screenshots/New-mobile-view.png)
 
   
 ### Links
@@ -45,34 +45,42 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 
 
 ### What I learned
 
-I learned how to make a webpage responsive using media queries. I also learnt how to switch between immages based on the screen size.
+I learned how to make a webpage responsive using media queries. I also learnt how to switch between immages based on the screen size using the picture tag.
 
-To see how you can add code snippets, see below:
+
 
 ```html
-<img class="image"  src="images/image-product-mobile.jpg" alt="Gabrielle Essence Perfume">
-<img class="image-desktop"  src="images/image-product-desktop.jpg" alt="">
+<picture>
+  <source  media="(min-width: 625px)" srcset="images/image-product-desktop.jpg">
+  <img class="image"  src="images/image-product-mobile.jpg" alt="Gabrielle Essence Perfume">
+</picture>
 ```
-```css
-.image-desktop {
-    display: none;
-}
-```
+
 The code above ensures that the "image-product-desktop.jpg" dose not display on mobile devices.
 
+I also learned hoew to add information which is only visible by screen readers.
+
+```html
+<span class="sr-only"> Old price </span>
+```
 ```css
-@media only screen and (min-width: 625px) {
-   .image {
-        display: none;
-    }
+.sr-only {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
 }
 ```
-The code above also ensures that the "image-product-mobile.jpg" does not display on screens with minimum witdth of 625 pixels.
+
+
+The code above also ensures that the "Old price" text is only visible to screen readers.
 
 
 ### Continued development
